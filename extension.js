@@ -1,6 +1,6 @@
 const Youtube = new MutationObserver(() => {
 	if (location.pathname != "/") return;
-	const nodes = document.querySelectorAll("ytd-continuation-item-renderer.ytd-rich-grid-renderer");
+	const nodes = document.querySelectorAll("ytd-continuation-item-renderer");
 	if (nodes.length <= 0) return;
 	nodes.forEach((node) => {
 		node.remove();
@@ -8,3 +8,4 @@ const Youtube = new MutationObserver(() => {
 	})
 });
 Youtube.observe(document, { subtree: true, childList: true });
+console.log("You have Anti-Adictive Youtube installed, Hello there!");
